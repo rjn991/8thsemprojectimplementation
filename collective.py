@@ -32,8 +32,8 @@ FRAMES_SIZE={1: (480, 720), 2: (480, 720), 3: (480, 720), 4: (480, 720), 5: (480
              71: (720, 1280), 72: (720, 1280), 73: (720, 1280), 74: (720, 1280)}
 
 
-ACTIONS=['NA','Crossing','Waiting','Queueing','Walking','Talking','Dancing','Jogging']
-ACTIVITIES=['Crossing','Waiting','Queueing','Walking','Talking','Dancing','Jogging']
+ACTIONS=['NA','Crossing','Waiting','Queueing','Walking','Talking']
+ACTIVITIES=['Crossing','Waiting','Queueing','Walking','Talking']
 # END: Original code by Zijian and Xinran
 
 ACTIONS_ID={a:i for i,a in enumerate(ACTIONS)}
