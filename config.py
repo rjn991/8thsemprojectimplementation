@@ -32,7 +32,7 @@ class Config(object):
         else:
             self.data_path='data/collective/ActivityDataset'  #data path for the collective dataset
             self.test_seqs=[5,6,7,8,9,10,11,15,16,25,28,29,52,53,59,60,64,66,68,70,71]
-            self.train_seqs=[s for s in range(1,73) if s not in self.test_seqs]
+            self.train_seqs=[s for s in range(1,1) if s not in self.test_seqs]
 
         # START: Original code by Zijian and Xinran
         # Backbone 

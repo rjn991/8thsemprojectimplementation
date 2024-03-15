@@ -27,7 +27,7 @@ def test_net(cfg):
     # Reading dataset
     _, validation_set = return_dataset(cfg)
 
-    params = {'batch_size': cfg.test_batch_size, 'shuffle': False, 'num_workers': 0}
+    params = {'batch_size': cfg.test_batch_size, 'shuffle': False, 'num_workers': 1}
 
     validation_loader = data.DataLoader(validation_set, **params)
 
@@ -70,10 +70,10 @@ def test_net(cfg):
         assert (False)
 
     if cfg.use_multi_gpu:
-        model = nn.DataParallel(model, device_ids=devices)
+        model = nn.DataParallel(model)
 
     timer = Timer()
-    model=model.to(f'cuda:{model.device_ids[0]}')
+    model=model.to(device=device)
     test_list = {'volleyball': test_volleyball, 'collective': test_collective}
     test = test_list[cfg.dataset_name]
 
@@ -279,7 +279,7 @@ def visualize(cfg, sid, fid, bboxes, actions_labels, activities_labels, num_draw
     img_path = cfg.result_path+'/seq%02d_frame%04d.jpg'%(sid,fid)
     plt.savefig(img_path)
     plt.close()
-    img = cv.imread(img_path)
-    cv.imshow("Results", img)
-    cv.waitKey(120)
+    # img = cv.imread(img_path)
+    # cv.imshow("Results", img)
+    # cv.waitKey(120)
 # END: Original code by Zijian and Xinran

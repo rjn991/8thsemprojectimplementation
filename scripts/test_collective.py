@@ -5,15 +5,15 @@ from test_net import *
 
 cfg=Config('collective')
 cfg.training_stage=3
-cfg.test_seqs=[9, 64]
+cfg.test_seqs=[9]
 
 cfg.train_backbone=False
 cfg.test_before_train=True
 cfg.image_size=480, 720
 cfg.out_size=57,87
 cfg.num_boxes=13
-cfg.num_actions=8
-cfg.num_activities=7
+cfg.num_actions=6
+cfg.num_activities=5
 cfg.num_frames=10
 cfg.num_graph=4
 cfg.tau_sqrt=True
