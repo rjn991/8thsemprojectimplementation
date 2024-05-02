@@ -10,10 +10,8 @@ cfg.image_size=480, 720
 cfg.out_size=57,87
 cfg.num_boxes=13
 
-# START: Original code by Zijian and Xinran
 cfg.num_actions=8
 cfg.num_activities=7
-# END: Original code by Zijian and Xinran
 
 cfg.num_frames=10
 
@@ -25,8 +23,6 @@ cfg.weight_decay=1e-2
 cfg.lr_plan={}
 cfg.max_epoch=100
 
-# START: Original code by Zijian and Xinran
 cfg.exp_note='Collective_train_' + cfg.backbone
-# END: Original code by Zijian and Xinran
 
 train_net(cfg)
