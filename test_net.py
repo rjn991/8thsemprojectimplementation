@@ -1,4 +1,3 @@
-# START: Original code by Zijian and Xinran
 from config import *
 from dataset import *
 from gcn_model import *
@@ -282,4 +281,3 @@ def visualize(cfg, sid, fid, bboxes, actions_labels, activities_labels, num_draw
     # img = cv.imread(img_path)
     # cv.imshow("Results", img)
     # cv.waitKey(120)
-# END: Original code by Zijian and Xinran
