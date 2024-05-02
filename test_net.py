@@ -254,16 +254,16 @@ def visualize(cfg, sid, fid, bboxes, actions_labels, activities_labels, num_draw
               weight='bold', bbox={'facecolor': 'white', 'alpha': 0.8, 'pad': 0.2, 'boxstyle':'round', 'edgecolor':'none'},
               color=colors[activities_labels[0]+1], fontsize=10, transform=axes.transAxes)
 
-    axes.text(0.5, 0.90, "Ground Truth Activity: " + ACTIVITIES[activities_in[0]],
-              style='normal', verticalalignment='top', horizontalalignment='center',
-              weight='bold',
-              bbox={'facecolor': 'white', 'alpha': 0.8, 'pad': 0.10, 'boxstyle':'round', 'edgecolor':'none'},
-              color=colors[activities_in[0]+1], fontsize=10, transform=axes.transAxes)
+    # axes.text(0.5, 0.90, "Ground Truth Activity: " + ACTIVITIES[activities_in[0]],
+    #           style='normal', verticalalignment='top', horizontalalignment='center',
+    #           weight='bold',
+    #           bbox={'facecolor': 'white', 'alpha': 0.8, 'pad': 0.10, 'boxstyle':'round', 'edgecolor':'none'},
+    #           color=colors[activities_in[0]+1], fontsize=10, transform=axes.transAxes)
 
-    axes.text(0.5, 0.85, "Actions Accuracy: {:.2f}".format(actions_accuracy) + "\nActivities Accuracy: {:.2f}".format(activities_accuracy),
-              style='normal', verticalalignment='top', horizontalalignment='center',
-              bbox={'facecolor': 'white', 'alpha': 0.8, 'pad': 0.2, 'boxstyle': 'round', 'edgecolor':'none'},
-              weight='bold', color='black', fontsize=10, transform=axes.transAxes)
+    # axes.text(0.5, 0.85, "Actions Accuracy: {:.2f}".format(actions_accuracy) + "\nActivities Accuracy: {:.2f}".format(activities_accuracy),
+    #           style='normal', verticalalignment='top', horizontalalignment='center',
+    #           bbox={'facecolor': 'white', 'alpha': 0.8, 'pad': 0.2, 'boxstyle': 'round', 'edgecolor':'none'},
+    #           weight='bold', color='black', fontsize=10, transform=axes.transAxes)
 
     for i in range(num_draw_bboxes):
         y1, x1, y2, x2 = bboxes[i]
