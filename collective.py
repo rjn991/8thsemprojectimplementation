@@ -9,7 +9,6 @@ import numpy as np
 
 from collections import Counter
 
-# START: Original code by Zijian and Xinran
 FRAMES_NUM={1: 302, 2: 347, 3: 194, 4: 257, 5: 536, 6: 401, 7: 968, 8: 221, 9: 356, 10: 302, 11: 1813, 12: 1084,
             13: 851, 14: 723, 15: 464, 16: 1021, 17: 905, 18: 600, 19: 203, 20: 342, 21: 650, 22: 361, 23: 311,
             24: 321, 25: 617, 26: 734, 27: 1804, 28: 470, 29: 635, 30: 356, 31: 690, 32: 194, 33: 193, 34: 395,
@@ -34,7 +33,6 @@ FRAMES_SIZE={1: (480, 720), 2: (480, 720), 3: (480, 720), 4: (480, 720), 5: (480
 
 ACTIONS=['NA','Crossing','Waiting','Queueing','Walking','Talking']
 ACTIVITIES=['Crossing','Waiting','Queueing','Walking','Talking']
-# END: Original code by Zijian and Xinran
 
 ACTIONS_ID={a:i for i,a in enumerate(ACTIONS)}
 ACTIVITIES_ID={a:i for i,a in enumerate(ACTIVITIES)}
