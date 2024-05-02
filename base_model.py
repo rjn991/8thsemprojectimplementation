@@ -151,7 +151,6 @@ class Basenet_collective(nn.Module):
         K=self.cfg.crop_size[0]
         NFB=self.cfg.num_features_boxes
 
-        # START: Original code by Zijian and Xinran
         if cfg.backbone == 'inv3':
             self.backbone = MyInception_v3(transform_input=False, pretrained=True)
         elif cfg.backbone == 'vgg16':
@@ -162,7 +161,6 @@ class Basenet_collective(nn.Module):
             self.backbone = MyMobileNet(pretrained=True)
         else:
             assert False
-        # END: Original code by Zijian and Xinran
 
         if not self.cfg.train_backbone:
             for p in self.backbone.parameters():
