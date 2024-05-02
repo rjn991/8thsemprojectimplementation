@@ -238,6 +238,8 @@ def test_collective(data_loader, model, device, epoch, cfg):
 def visualize(cfg, sid, fid, bboxes, actions_labels, activities_labels, num_draw_bboxes, colors, legends, activities_in, actions_accuracy, activities_accuracy):
     path = os.path.join(cfg.data_path, 'seq%02d/frame%04d.jpg'%(sid,fid))
     image = cv.imread(path)
+    image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+
     if image is None:
         print('Could not open or find the image: %s', path)
         exit(0)
