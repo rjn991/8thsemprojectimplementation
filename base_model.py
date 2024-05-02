@@ -170,12 +170,10 @@ class Basenet_collective(nn.Module):
         
         self.roi_align=RoIAlign(*self.cfg.crop_size)
 
-        # START: Original code by Zijian and Xinran
         if cfg.backbone == 'inv3':
             self.fc_emb_1 = nn.Linear(K * K * D, NFB)
         elif cfg.backbone == 'mobilenet':
             self.fc_emb_1 = nn.Linear(32000, NFB)
-        # END: Original code by Zijian and Xinran
 
         self.dropout_emb_1 = nn.Dropout(p=self.cfg.train_dropout_prob)
         self.fc_actions=nn.Linear(NFB,self.cfg.num_actions)
